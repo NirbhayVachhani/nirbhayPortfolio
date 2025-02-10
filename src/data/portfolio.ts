@@ -47,7 +47,7 @@ export const projects: Project[] = [
     description: "A pet care app connecting pet owners and lovers, featuring secure chat with end-to-end encryption and authentication.",
     image: "https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=800",
     technologies: ["Flutter", "Firebase", "Dart"],
-    githubUrl: "https://github.com"
+    githubUrl: "" 
   },
   {
     id: 4,
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     description: "An educational Unity game exploring India's cultural heritage, featuring quizzes and rewards for enhanced engagement.",
     image: "https://images.unsplash.com/photo-1470350576089-539d5a852bf7?auto=format&fit=crop&w=800",
     technologies: ["Unity", "C#", "Blender", "Photoshop"],
-    githubUrl: "https://github.com"
+    githubUrl: "https://github.com/NirbhayVachhani/Cultural-Rail.git"
   },
   {
     id: 5,
