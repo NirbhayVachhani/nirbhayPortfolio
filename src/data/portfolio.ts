@@ -12,6 +12,8 @@ export interface Experience {
   id: number;
   role: string;
   company: string;
+  startDate: string;
+  endDate: string;
   period: string;
   location: string;
   type: string;
@@ -31,7 +33,7 @@ export const projects: Project[] = [
     description: "A comprehensive platform with role-based access for Administrators, Instructors, and Students, featuring Shopify integration for purchases and D2L integration for automatic grading.",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800",
     technologies: ["Svelte", "TypeScript", "Tailwind CSS", "Firebase", "D2L"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/NirbhayVachhani/",
   },
   {
     id: 2,
@@ -63,7 +65,7 @@ export const projects: Project[] = [
     description: "A comprehensive repository of C programs covering essential concepts and core algorithms.",
     image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800",
     technologies: ["C"],
-    githubUrl: "https://github.com"
+    githubUrl: "https://github.com/NirbhayVachhani/C-Programming.git"
   },
 
 ];
@@ -73,83 +75,78 @@ export const experiences: Experience[] = [
     id: 1,
     role: "OMNI Customer Fulfillment Associate",
     company: "Walmart",
-    period: "Sep 2023 - Present",
+    startDate: "2023-09",
+    endDate: "Present",
+    period: "Sep 2023 - Present · 1 yr 8 mos",
     location: "Calgary, Alberta, Canada",
     type: "Permanent Part-time",
-    skills: ["Customer Service", "Inventory Management", "Team Collaboration"],
+    skills: ["Order Fulfillment", "Inventory Management", "Workflow Optimization", "Time Management", "Customer Satisfaction"],
     achievements: [
-      "Responsible for picking and dispensing online orders received through the system",
-      "Encourage customers to complete surveys to help maintain the store's NPS score",
-      "Assist other departments with price changes, recovery, and zoning tasks"
+      "Managed online and in-store order fulfillment at Walmart, ensuring fast and accurate processing.",
+      "Collaborated with cross-functional teams to improve customer experience and workflow efficiency."
     ]
   },
   {
     id: 2,
-    role: "Software Developer",
-    company: "Technospot Technologies",
-    period: "Apr 2024 - Sep 2024",
+    role: "Instructor",
+    company: "LearnWithYantraMayaa",
+    startDate: "2023-01",
+    endDate: "2023-06",
+    period: "Jan 2023 - Jun 2023 · 6 mos",
     location: "Remote",
     type: "Internship",
-    skills: ["React Native", "Firebase", "Cloud Firestore", "SDLC"],
+    skills: ["Python (Programming Language)", "Teaching Programming", "Curriculum Development"],
     achievements: [
-      "Participated in Agile software development processes, including sprint planning and daily standups",
-      "Supported the team in researching and implementing new technologies for system improvement"
+      "Led Python programming tutorials for 30+ students, focusing on logic and clean coding.",
+      "Mentored on test automation with Selenium and Cypress.",
+      "Developed engaging teaching methods to enhance learning outcomes."
     ]
   },
   {
     id: 3,
-    role: "Frontend Developer",
-    company: "Swarm Technologies",
-    period: "Sep 2022 - May 2023",
-    location: "Remote",
-    type: "Internship",
-    skills: ["Web Development", "Frontend Development", "UI/UX"],
+    role: "Co Lead",
+    company: "Parul University",
+    startDate: "2020-08",
+    endDate: "2023-03",
+    period: "Aug 2020 - Mar 2023 · 2 yrs 8 mos",
+    location: "Vadodara, Gujarat, India",
+    type: "Permanent Part-time",
+    skills: ["Leadership Management", "Event Management", "Team Collaboration"],
     achievements: [
-      "Developed and maintained responsive user interfaces for web applications",
-      "Worked closely with the development team to implement new features",
-      "Gained hands-on experience with modern frontend technologies"
+      "Co-Lead at Parul University overseeing campus-wide activities and departmental initiatives.",
+      "Planned and organized events for smooth coordination and collaboration.",
+      "Managed departmental initiatives fostering collaboration and teamwork."
     ]
   },
   {
     id: 4,
-    role: "Co Lead",
-    company: "Parul University",
-    period: "Aug 2020 - Mar 2023",
-    location: "InPerson",
+    role: "Research Intern",
+    company: "ClointFusion",
+    startDate: "2021-09",
+    endDate: "2022-09",
+    period: "Sep 2021 - Sep 2022 · 1 yr 1 mo",
+    location: "Remote",
     type: "Permanent Part-time",
-    skills: ["Leadership", "Event Management", "Team Coordination"],
+    skills: ["Python Automation", "Workflow Optimization", "Technical Documentation", "Research Skills", "Scripting"],
     achievements: [
-      "Served as the Co-Lead for the PIET-DS campus, overseeing activities across all departments",
-      "Planned and organized campus-wide events ensuring smooth coordination",
-      "Managed departmental initiatives fostering collaboration"
+      "Developed Python automation scripts to streamline daily tasks and improve workflow efficiency.",
+      "Conducted research on tools and presented recommendations for workflow enhancements.",
+      "Created user-friendly guides to help non-dev teams utilize automation tools effectively."
     ]
   },
   {
     id: 5,
-    role: "Research Intern",
-    company: "ClointFusion",
-    period: "Sep 2021 - Sep 2022",
-    location: "Remote",
-    type: "Internship",
-    skills: ["Python", "Automation", "Scrum"],
-    achievements: [
-      "Developed automation scripts in Python to enhance efficiency",
-      "Worked within a Scrum framework participating in sprint planning",
-      "Conducted bi-weekly research for automation projects"
-    ]
-  },
-  {
-    id: 6,
     role: "Frontend Developer",
     company: "Rotary Club",
-    period: "Jun 2021 - Jul 2021",
-    location: "Remote",
-    type: "Internship",
-    skills: ["Web Development", "Frontend Development"],
+    startDate: "2021-06",
+    endDate: "2021-07",
+    period: "Jun 2021 - Jul 2021 · 2 mos",
+    location: "Vadodara, Gujarat, India",
+    type: "Contract Part-time",
+    skills: ["Web Development", "Frontend Development", "UI/UX"],
     achievements: [
-      "Collaborated with a team to design and develop an event website",
-      "Created key features including login functionality and registration forms",
-      "Contributed to building a user-friendly event management platform"
+      "Redesigned the Rotary Club website for event registration, enabling seamless login and registration processes.",
+      "Implemented user-friendly features to enhance user experience and engagement on the website."
     ]
   }
 ];

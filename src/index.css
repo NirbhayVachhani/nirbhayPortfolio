@@ -2,10 +2,180 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --cursor-color: #0ea5e9;
+  --bg-dark: #0f172a; /* Darkened for a more premium feel */
+  --bg-darker: #020617;
+  --bg-card: #1e293b;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --accent: #06b6d4; /* Changed to cyan for more modern look */
+  --accent-light: #67e8f9;
+  --border-color: #334155;
+}
+
+/* Basic styles */
 html {
   scroll-behavior: smooth;
+  cursor: none; /* Hide default cursor */
 }
 
 body {
-  @apply text-gray-800;
+  color: var(--text-primary);
+  background-color: var(--bg-dark);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom cursor */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid var(--accent);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  transition: transform 0.1s;
+}
+
+.hoverable:hover ~ .custom-cursor {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(6, 182, 212, 0.2);
+  mix-blend-mode: normal;
+}
+
+/* Cursor animations */
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.2em;
+  background-color: var(--accent);
+  margin-left: 2px;
+  animation: blink 1s infinite;
+  vertical-align: text-bottom;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Animated background */
+.animated-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.animated-bg .orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: 0.2;
+  animation: float 15s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(20px) translateX(10px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(10px) translateX(-15px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-20px) translateX(15px) rotate(8deg);
+  }
+}
+
+/* Card effects */
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(20, 184, 166, 0.3);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Common layout classes */
+.container {
+  width: 100%;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+/* Experience tree styles */
+.tree-container {
+  background-color: var(--bg-card);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.tree-header {
+  background-color: var(--bg-darker);
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tree-content {
+  padding: 1.5rem;
+  background-color: var(--bg-darker);
+  font-family: monospace;
+}
+
+.tree-node {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s;
+}
+
+.tree-node:hover {
+  background-color: rgba(31, 41, 55, 0.5);
+}
+
+.tree-node-expanded {
+  background-color: rgba(31, 41, 55, 0.8);
+  border-left: 2px solid var(--accent);
+}
+
+.tree-details {
+  margin-left: 2rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border-color);
+  margin-top: 0.5rem;
 }
