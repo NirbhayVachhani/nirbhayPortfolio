@@ -175,9 +175,9 @@ const Hero = () => {
               className="flex flex-wrap justify-center gap-5 mb-12"
             >
               {[
-                { icon: <Github size={22} />, href: "https://github.com", label: "GitHub" },
-                { icon: <Linkedin size={22} />, href: "https://linkedin.com", label: "LinkedIn" },
-                { icon: <Mail size={22} />, href: "mailto:email@example.com", label: "Email" },
+                { icon: <Github size={22} />, href: "https://github.com/NirbhayVachhani", label: "GitHub" },
+                { icon: <Linkedin size={22} />, href: "https://www.linkedin.com/in/nirbhayvachhani/", label: "LinkedIn" },
+                { icon: <Mail size={22} />, href: "mailto:nirbhayvachhani@gmail.com", label: "Email" },
                 { icon: <Code size={22} />, href: "#projects", label: "Projects" }
               ].map((item, index) => (
                 <motion.a
